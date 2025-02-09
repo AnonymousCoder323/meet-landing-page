@@ -1,3 +1,7 @@
+---
+import '../styles/global.css';
+---
+
 <!doctype html>
 <html lang='en'>
   <head>
@@ -12,14 +16,51 @@
     />
 
     <title>Frontend Mentor | Meet landing page</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
   </head>
-  <body>
-    Meet makes it easy to connect with others face-to-face virtually and
-    collaborate across any device. Download v1.3 What is it? 01 Built for modern
-    use Smarter meetings, all in one place Send messages, share files, show your
-    screen, and record your meetings — all in one workspace. Control who can
-    join with invite-only team access, data encryption, and data export. 02
-    Experience more together Stay connected with reliable HD meetings and
-    unlimited one-on-one and group video sessions. Download v1.3
+  <body class='font-red-hat-display'>
+    <header>
+      <img src='/logo.svg' alt='Meet Logo' width='118' height='28' />
+    </header>
+    <main>
+      <section id='hero'>
+        <img src='' alt='' />
+        <h1>Group Chat for Everyone</h1>
+        <p>
+          Meet makes it easy to connect with others face-to-face virtually and
+          collaborate across any device.
+        </p>
+        <button>Download v1.3</button>
+        <a href='#about'>What is it?</a>
+      </section>
+      <section id='about'>
+        <div>01</div>
+        <div>
+          <img src='' alt='' />
+          <img src='' alt='' />
+          <img src='' alt='' />
+          <img src='' alt='' />
+        </div>
+        <p>Built for modern use</p>
+        <h2>Smarter meetings, all in one place</h2>
+        <p>
+          Send messages, share files, show your screen, and record your meetings
+          — all in one workspace. Control who can join with invite-only team
+          access, data encryption, and data export.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div>02</div>
+      <h2>Experience more together</h2>
+      <p>
+        Stay connected with reliable HD meetings and unlimited one-on-one and
+        group video sessions.
+      </p>
+      <button>Download v1.3</button>
+    </footer>
   </body>
 </html>
