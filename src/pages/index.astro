@@ -1,9 +1,13 @@
 ---
+import ButtonLink from '../components/ButtonLink.astro';
+import Divider from '../components/Divider.astro';
+import GalleryImage from '../components/GalleryImage.astro';
+import HeroText from '../components/HeroText.astro';
 import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' class='md:scroll-smooth'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -21,46 +25,95 @@ import '../styles/global.css';
       @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
     </style>
   </head>
-  <body class='font-red-hat-display'>
-    <header>
+  <body
+    class='flex flex-col items-center overflow-x-hidden bg-white font-red-hat-display text-body-clamp/normal font-medium text-slate-600'
+  >
+    <header class='mt-12'>
       <img src='/logo.svg' alt='Meet Logo' width='118' height='28' />
     </header>
-    <main>
-      <section id='hero'>
-        <img src='' alt='' />
-        <h1>Group Chat for Everyone</h1>
-        <p>
-          Meet makes it easy to connect with others face-to-face virtually and
-          collaborate across any device.
-        </p>
-        <button>Download v1.3</button>
-        <a href='#about'>What is it?</a>
-      </section>
-      <section id='about'>
-        <div>01</div>
-        <div>
-          <img src='' alt='' />
-          <img src='' alt='' />
-          <img src='' alt='' />
-          <img src='' alt='' />
+    <main class='w-full'>
+      <section id='hero' class='p-8 pt-16'>
+        <div
+          class='flex flex-row gap-[1.0625rem] md:justify-center xl:justify-between'
+        >
+          <img
+            class='-ms-16 h-[67%] w-[67%] max-w-[24.625rem]'
+            src='/desktop/image-hero-left.png'
+            alt='Left hero image of people'
+            width='394'
+            height='303'
+          />
+          <HeroText class='hidden xl:flex' />
+          <img
+            class='h-[67%] w-[67%] max-w-[24.625rem] md:-me-16'
+            src='/desktop/image-hero-right.png'
+            alt='Right hero image of people'
+            width='394'
+            height='303'
+          />
         </div>
-        <p>Built for modern use</p>
-        <h2>Smarter meetings, all in one place</h2>
-        <p>
+        <HeroText class='xl:hidden' />
+      </section>
+    </main>
+    <section id='about' class='flex flex-col items-center gap-16 p-8 pb-16'>
+      <Divider> 01 </Divider>
+      <div class='flex flex-row flex-wrap justify-center gap-4'>
+        <GalleryImage
+          src='/desktop/image-woman-in-videocall.jpg'
+          alt='Woman in video-call'
+        />
+        <GalleryImage
+          src='/desktop/image-women-videochatting.jpg'
+          alt='Women video-chatting'
+        />
+        <GalleryImage
+          src='/desktop/image-men-in-meeting.jpg'
+          alt='Men in meeting'
+        />
+        <GalleryImage
+          src='/public/desktop/image-man-texting.jpg'
+          alt='Man texting'
+        />
+      </div>
+      <div class='flex flex-col items-center text-center'>
+        <p
+          class='text-sub-heading-clamp/[1.1] font-black tracking-[.25rem] text-cyan-600 uppercase'
+        >
+          Built for modern use
+        </p>
+        <h2
+          class='mt-4 max-w-[27.8125rem] text-heading-md-clamp/[1.1] font-black text-slate-900'
+        >
+          Smarter meetings, all in one place
+        </h2>
+        <p class='mt-8 max-w-[34rem] font-medium'>
           Send messages, share files, show your screen, and record your meetings
           — all in one workspace. Control who can join with invite-only team
           access, data encryption, and data export.
         </p>
-      </section>
-    </main>
-    <footer>
-      <div>02</div>
-      <h2>Experience more together</h2>
-      <p>
-        Stay connected with reliable HD meetings and unlimited one-on-one and
-        group video sessions.
-      </p>
-      <button>Download v1.3</button>
-    </footer>
+      </div>
+    </section>
   </body>
+  <footer class='w-full'>
+    <Divider class='-mb-[1.75rem]'>02</Divider>
+    <div class='bg-cyan-600 bg-[url(/desktop/image-man-texting.jpg)] bg-cover'>
+      <div
+        class='flex flex-col items-center gap-6 bg-cyan-600/95 px-8 py-16 text-center text-white lg:flex-row lg:justify-center lg:gap-8 lg:py-[7rem] lg:text-left'
+      >
+        <h2 class='max-w-[27.8125rem] text-heading-md-clamp/[1.1] font-black'>
+          Experience more together
+        </h2>
+        <p class='max-w-[22.1875rem]'>
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <ButtonLink
+          href='#about'
+          class='bg-purple-600 hover:bg-purple-hover focus:bg-purple-hover'
+        >
+          Download <span class='text-purple-300'>v1.3</span>
+        </ButtonLink>
+      </div>
+    </div>
+  </footer>
 </html>

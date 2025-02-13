@@ -3,14 +3,19 @@
 @theme {
   --color-cyan-300: #8fe3f9;
   --color-cyan-600: #4d96a9;
+  --color-cyan-hover: #71c0d4;
   --color-purple-300: #d9b8ff;
   --color-purple-600: #855fb1;
+  --color-purple-hover: #b18bdd;
   --color-slate-300: #d1d1df;
   --color-slate-600: #87879d;
   --color-slate-900: #28283d;
   --color-white: #fafafa;
+  --text-heading-lg-clamp: clamp(2.5rem, 1.972rem + 2.254vw, 4rem);
+  --text-heading-md-clamp: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
+  --text-sub-heading-clamp: clamp(0.75rem, 0.662rem + 0.376vw, 1rem);
+  --text-body-clamp: clamp(1rem, 0.956rem + 0.188vw, 1.125rem);
   --font-red-hat-display: 'Red Hat Display', 'sans-serif';
-  --box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.2474);
 }
 
 :root {

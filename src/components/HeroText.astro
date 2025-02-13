@@ -1,0 +1,35 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div
+  class={`mx-auto mt-12 flex max-w-[30.5188rem] flex-col items-center gap-6 md:mt-[4.5rem] ${className}`}
+>
+  <h1 class='text-center text-heading-lg-clamp/[1.1] font-black text-slate-900'>
+    Group Chat for Everyone
+  </h1>
+  <p class='text-center'>
+    Meet makes it easy to connect with others face-to-face virtually and
+    collaborate across any device.
+  </p>
+  <div class='flex flex-row flex-wrap justify-center gap-4'>
+    <ButtonLink
+      class='bg-cyan-600 hover:bg-cyan-hover focus:bg-cyan-hover'
+      href='#'
+    >
+      Download <span class='text-cyan-300'>v1.3</span>
+    </ButtonLink>
+    <ButtonLink
+      href='#about'
+      class='bg-purple-600 hover:bg-purple-hover focus:bg-purple-hover'
+    >
+      What is it?
+    </ButtonLink>
+  </div>
+</div>
